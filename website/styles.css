@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+h1,
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header {
+  border-bottom: 4px solid brown;
+}
+header h1 {
+  text-align: center;
+}
+a {
+  text-decoration: underline brown;
+  color: brown;
+}
+.main {
+  float: left;
+  width: 55%;
+  text-align: justify;
+  padding: 10px;
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px solid brown;
+  margin: 15px 0;
+}
+.main h2 {
+  text-align: initial !important;
+}
+.mid-section {
+  float: left;
+  width: 22.5%;
+  padding: 0 20px;
+}
+.mid-section ul li {
+  padding-bottom: 5px;
+}
+.sidebar {
+  float: left;
+  width: 22.5%;
+}
+.btn {
+  border: 1px solid brown;
+  width: 90%;
+  color: brown;
+  font: 500 larger 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px 0;
+  text-align: center;
+  margin: 15px auto;
+  position: relative;
+}
+.overlay {
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: brown;
+  left: 0;
+  top: 0;
+  color: white;
+  padding: 15px 37px;
+  opacity: 0;
+  transition: all .3s ease-out;
+}
+.btn:hover .overlay{
+  width: 100%;
+  opacity: 1;
+}
+.id-card h2 {
+  margin: 0;
+  padding: 8px 0 8px 8px;
+}
+.id-card {
+  clear: both;
+  width: 33%;
+  margin: 45px auto;
+  background-color: red;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+.details {
+  height: 135px;
+  width: 100%;
+  background-color: darkred;
+}
+.details ul {
+  list-style-type: none;
+  padding: 2px 0 10px 8px;
+  margin: 0;
+  float: left;
+  color: white;
+}
+.details ul li {
+  padding: 2px 0;
+}
+.details img {
+  float: right;
+  width: 135px;
+  height: 135px;
+}
+.id-card p {
+  clear: both;
+  margin: 0;
+  padding: 3px 0 8px 8px; 
+}
+.biography {
+  width: 50%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 15px;
+  text-align: justify;
+}
+.contact {
+  height: 90px;
+  border: 5px solid purple;
+  background-color: #eee;
+}
+.biography h1 {
+  border-bottom: 10px dotted purple;
+  color: hotpink;
+  padding-bottom: 5px;
+}
+.biography h2 {
+  font-style: italic;
+}
+.biography h3 {
+  color: darkgray;
+}
+.contact ul {
+  padding: 0;
+  margin: 20px 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .id-card {
+    width: 38%;
+  }
+  .biography {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header h1 {
+    padding-top: 18px;
+  }
+  .id-card {
+    width: 50%;
+  }
+  .biography {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    column-count: 2;
+    width: 50%;
+  }
+  .mid-section,
+  .sidebar {
+    width: 25%;
+  }
+  .id-card {
+    width: 63%;
+  }
+  .biography {
+    width: 80%;    
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    border-width: 3px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+  .main,
+  .mid-section,
+  .sidebar {
+    float: none;
+  }
+  .main {
+    width: 100%;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .mid-section {
+    width: 75%;
+    margin-left: 15%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .btn {
+    width: 55%;
+  }
+  .id-card {
+    width: 80%;
+  }
+  .biography {
+    width: 95%;
+    padding: 7px;
+  }
+  .biography h1 {
+    border-width: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.3em;
+  }
+  .main {
+    column-count: 1;
+    padding: 8px;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  .mid-section {
+    margin-left: 7%;
+  }
+  .btn {
+    width: 70%;
+  }
+  .details {
+    height: 90px;
+  }
+  .details img {
+    height: 90px;
+    width: 90px;
+  }
+  .details ul li {
+    font-size: x-small; 
+    padding: 1.6px 0;
+  }
+  .id-card {
+    width: 85%;
+  }
+  .id-card p {
+    font-size: 0.7em;
+    padding-top: 0;
+  }
+  .id-card h2 {
+    padding-bottom: 4px;
+  }
+  .biography {
+    width: 95%;
+    padding: 7px;
+  }
+  .biography h1 {
+    font-size: x-large;
+    border-width: 6px;
+  }
+  .biography h3 {
+    font-size: 0.9em;
+  }
+  .biography p,
+  .contact ul {
+    font-size: 0.85em;
+  }
+  .contact {
+    border-width: 3px;
+    height: 70px;
+  }
+  .contact ul {
+    margin: 12px 20px;
+  }
+}
